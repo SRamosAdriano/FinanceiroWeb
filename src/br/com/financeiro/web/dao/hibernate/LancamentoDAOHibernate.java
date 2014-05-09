@@ -35,7 +35,7 @@ public class LancamentoDAOHibernate implements LancamentoDAO {
 
 	@Override
 	public Lancamento carregar(Integer lancamento) {
-		return (Lancamento) this.session.createCriteria(Lancamento.class);
+		return (Lancamento) this.session.get(Lancamento.class, lancamento);
 	}
 
 	@SuppressWarnings("unchecked")

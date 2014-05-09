@@ -33,6 +33,12 @@
 				</p:column>
 				<p:column width="60">
 					<f:facet name="header">Valor</f:facet>
+					<h:outputText style="color: #{lancamento.categoria.fator gt 0 ? 'green' : 'red'}; text-align:right; display:block;" value="#{lancamento.valor}">
+						<f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+					</h:outputText>
+				</p:column>
+				<p:column width="60">
+					<f:facet name="header">Saldo</f:facet>
 					<h:outputText style="color: #{lancamento.categoria.fator gt 0 ? 'green' : 'red'}; text-align:right; display:block;" value="#{lancamentoMB.saldos[index]}">
 						<f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
 					</h:outputText>
